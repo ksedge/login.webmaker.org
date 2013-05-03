@@ -18,7 +18,7 @@ function configure( app ){
   app.configure( function(){
     app.set( "views", __dirname + "/views" );
     app.set( "view engine", "ejs" );
-    app.use( express.cookieParser() );
+    app.use( express.cookieParser("we shall see") );
     app.use(express.cookieSession({
       key: 'wm.sid',
       secret: env.get('SESSION_SECRET'),

@@ -126,6 +126,7 @@ Note that your variables do not become globals, they are scoped so that they onl
 
 If you want to be able to authenticate user actions on your app quickly and easily, follow these steps to persist the Login server's session to your app.
 
+**NOTE**: Server-side integration is currently supported only by `Express 3.2.1`.  Update your app's `package.json` file to reflect this, and ensure you have installed the upgrade with `npm install` before trying the steps below!
 
 ### 1. Include the required SSO server-side code in your server-side app
 
@@ -157,7 +158,7 @@ If you have an .env file for your app, you can load the `secret` and `domain` va
 This step makes the node server require superuser permissions to run, and temporarily modifies your host file. e.g. `sudo node server.js`
 See: https://github.com/jed/localhose#localhoseset-host1-host2-etc- 
 
-Add `localhose` (watch the spelling!) to your dev dependancies  in your **package.json** file.  If you don't have one, add a field like this:
+Add `localhose` (note the spelling) to your dev dependancies in your **package.json** file.  If you don't have one, add a field like this:
 
 ```javascript
 devDependencies: {
@@ -174,7 +175,7 @@ localhose = require( "localhose" );
 Then add this line before the server is started:
 
 ```javascript
-localhose.set("login.webmaker.local", YOUR_APP_NAME + ".webmaker.local");
+localhose.set(YOUR_APP_NAME + ".webmaker.local");
 ```
 
 Run `NPM install --dev` to install the localhose module. 

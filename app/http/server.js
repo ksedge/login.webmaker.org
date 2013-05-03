@@ -30,7 +30,7 @@ http.configure(function(){
   http.use(application.allowCorsRequests);
   http.use(express.logger());
   http.use(express.static( path.join(__dirname, 'public')));
-  http.use(express.cookieParser());
+  http.use(express.cookieParser("we shall see"));
   http.use(express.bodyParser());
   http.use(express.methodOverride());
   http.use(express.cookieSession({

@@ -8,7 +8,7 @@ var express = require( "express" ),
     env = require( "../../config/environment" ),
     localhose = require( "localhose" );
 
-localhose.set("login.webmaker.local", "thimble.webmaker.local");
+localhose.set("login.webmaker.local", "thimble.webmaker.local", "popcorn.webmaker.local");
 
 var app1 = express();
 var app2 = express();

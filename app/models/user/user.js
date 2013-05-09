@@ -135,6 +135,7 @@ module.exports = function ( connection ) {
 
       model.findOne( query, callback );
     },
+    
     /**
      * createUser( data, callback )
      * -
